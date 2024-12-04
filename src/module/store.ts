@@ -1,9 +1,11 @@
 import { create } from 'zustand';
 
-export const appStore = create((set) => ({
-	userNameGithub: '',
-	setUserNameGithub: (userNameGithub: string) => set({ userNameGithub }),
+export interface AppStore {
+	resultRoasted: string;
+	setResultRoasted: (resultRoasted: string) => void;
+}
 
+export const appStore = create<AppStore>((set) => ({
 	resultRoasted: '',
 	setResultRoasted: (resultRoasted: string) => set({ resultRoasted }),
 }));
