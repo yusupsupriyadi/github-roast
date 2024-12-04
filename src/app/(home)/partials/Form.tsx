@@ -8,7 +8,7 @@ import { AppStore, appStore } from '@/module/store';
 
 export const Form = ({ languages }: { languages: Language[] }) => {
 	const [isLoading, setIsLoading] = useState(false);
-	const [userNameGithub, setUserNameGithub] = useState('yusupsupriyadi');
+	const [userNameGithub, setUserNameGithub] = useState('');
 	const [selectedLanguage, setSelectedLanguage] = useState('English');
 	const setResultRoasted = appStore(
 		(state: AppStore) => state.setResultRoasted,
