@@ -1,3 +1,17 @@
+/**
+ * Home Page Component - Server Side Rendered (SSR)
+ *
+ * Komponen ini merender halaman utama aplikasi dan dijalankan di server side.
+ * Menggunakan Next.js App Router dengan file convention 'page.tsx'.
+ *
+ * Fitur SSR yang diimplementasikan:
+ * - Pembacaan file JSON languages secara server-side
+ * - Hydration data ke client components
+ *
+ * @component
+ * @returns {JSX.Element} Halaman utama aplikasi
+ */
+
 import { Background } from './partials/Background';
 import { Title } from './partials/Title';
 import { Form } from './partials/Form';
