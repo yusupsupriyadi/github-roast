@@ -4,7 +4,7 @@ export const Title = () => {
 	return (
 		<div className='p-4 pt-[30vh] mx-auto w-full flex flex-col items-center justify-center'>
 			<Link
-				href='https://github.com/yusupsupriyadi/github-roasted'
+				href='https://github.com/yusupsupriyadi/github-roast'
 				target='_blank'
 				rel='noreferrer'
 				className='group flex items-center gap-2 px-3 py-2 rounded-full bg-neutral-800/50 hover:bg-neutral-700/50 transition-colors border border-neutral-700 text-xs font-medium text-neutral-200'>
