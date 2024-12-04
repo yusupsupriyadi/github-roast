@@ -4,13 +4,15 @@ import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { Language } from '@/components/global.types';
-import { appStore } from '@/module/store';
+import { AppStore, appStore } from '@/module/store';
 
 export const Form = ({ languages }: { languages: Language[] }) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [userNameGithub, setUserNameGithub] = useState('yusupsupriyadi');
 	const [selectedLanguage, setSelectedLanguage] = useState('English');
-	const setResultRoasted = appStore((state: any) => state.setResultRoasted);
+	const setResultRoasted = appStore(
+		(state: AppStore) => state.setResultRoasted,
+	);
 
 	const handleSubmit = async () => {
 		setIsLoading(true);
