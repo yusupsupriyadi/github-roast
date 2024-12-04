@@ -1,8 +1,8 @@
 'use client';
-import { appStore } from '@/module/store';
+import { AppStore, appStore } from '@/module/store';
 
 export const ResultRoasted = () => {
-	const resultRoasted = appStore((state: any) => state.resultRoasted);
+	const resultRoasted = appStore((state: AppStore) => state.resultRoasted);
 
 	if (!resultRoasted) return null;
 
