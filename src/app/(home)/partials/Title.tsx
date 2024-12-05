@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const Title = () => {
 	return (
@@ -22,11 +22,12 @@ export const Title = () => {
 				<span>Repository</span>
 			</Link>
 
-			<h1 className='text-3xl mt-2 md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50'>
+			<h1 className='text-4xl mt-2 md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50'>
 				Github Roasted
 			</h1>
 			<p className='mt-2 md:mt-4 font-normal text-sm md:text-base text-neutral-50 max-w-lg text-center mx-auto'>
-				Enter your Github username to get roasted.
+				Brace yourself, we&apos;re going to roast your GitHub profile
+				mercilessly!
 			</p>
 		</div>
 	);
