@@ -24,7 +24,7 @@ export const Title = () => {
 					href='https://github.com/yusupsupriyadi/github-roast'
 					target='_blank'
 					rel='noreferrer'
-					className='group flex items-center gap-2 px-3 py-2 rounded-full bg-neutral-800/50 hover:bg-neutral-700/50 transition-colors border border-neutral-700 text-xs font-medium text-neutral-200'>
+					className='group flex items-center gap-2 px-3 py-2 rounded-full bg-gradient-to-br from-neutral-800/30 via-neutral-800/50 to-white/30 hover:bg-gradient-to-br hover:from-neutral-800/50 hover:via-neutral-800/70 hover:to-white/30 transition-colors border border-neutral-700 text-xs font-medium text-neutral-200'>
 					<svg
 						className='w-4 h-4'
 						fill='currentColor'
