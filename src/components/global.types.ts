@@ -13,6 +13,8 @@ export type GithubProfile = {
 	updated_at: string;
 	twitter_username: string;
 	email: string;
+	total_private_repos: number;
+	collaborators: number;
 };
 
 export type Language = {
