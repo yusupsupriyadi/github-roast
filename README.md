@@ -15,21 +15,7 @@ GitHub Roasted is a platform that uses AI to provide humorous and constructive a
 
 ## 🏗️ Application Architecture
 
-### 1. Folder Structure
-├── public/
-│ └── json/
-│ └── languages.json
-├── src/
-│ ├── app/
-│ │ ├── (home)/
-│ │ │ └── page.tsx
-│ │ ├── api/
-│ │ │ └── roasted/
-│ │ │ └── route.ts
-│ │ └── layout.tsx
-│ └── components/
-
-### 2. Main Components
+### Main Components
 - **Layout (layout.tsx)**: Sets up basic application structure, fonts, and analytics
 - **Home Page (page.tsx)**: Main page with Background, Title, Form, and ResultRoasted components
 - **API Route (route.ts)**: Handles integration with GitHub API and Gemini AI
@@ -39,9 +25,9 @@ GitHub Roasted is a platform that uses AI to provide humorous and constructive a
 ### Environment Variables
 Create a `.env` file based on `.env.example`:
 
-API_KEY_GEMINI_AI=<your_gemini_ai_key>
-GITHUB_PERSONAL_TOKEN=<your_github_token>
-NEXT_PUBLIC_BASE_URL=<your_website_url>
+- API_KEY_GEMINI_AI=<your_gemini_ai_key>
+- GITHUB_PERSONAL_TOKEN=<your_github_token>
+- NEXT_PUBLIC_BASE_URL=<your_website_url>
 
 ## 🌟 Main Features
 
