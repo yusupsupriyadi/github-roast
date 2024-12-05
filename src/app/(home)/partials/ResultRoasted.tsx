@@ -14,9 +14,10 @@ export const ResultRoasted = () => {
 					<div className='w-3 h-3 rounded-full bg-yellow-500'></div>
 					<div className='w-3 h-3 rounded-full bg-green-500'></div>
 				</div>
-				<p className='text-neutral-300 leading-relaxed whitespace-pre-wrap animate-fade-in'>
-					{resultRoasted}
-				</p>
+				<div
+					className='text-neutral-300 leading-relaxed whitespace-pre-wrap animate-fade-in body-roasted'
+					dangerouslySetInnerHTML={{ __html: resultRoasted }}
+				/>
 			</div>
 		</div>
 	);
