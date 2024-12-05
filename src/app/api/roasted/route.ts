@@ -4,6 +4,7 @@ import { GithubProfile } from '@/components/global.types';
 import axios from 'axios';
 
 const TOKEN = process.env.API_KEY_GEMINI_AI;
+const GITHUB_PERSONAL_TOKEN = process.env.GITHUB_PERSONAL_TOKEN;
 
 /**
  * Handler untuk HTTP POST request
@@ -89,7 +90,7 @@ const generatePrompt = (data: GithubProfile, language: string) => {
 			data.location || 'Not mentioned'
 		} - What can be said about their location?
 
-		Create a creative and funny roast based on the data above. Remember to keep it respectful and entertaining!
+		Create a creative and funny roast based on the data above. Remember to keep it respectful and entertaining! And give suggestions to improve their GitHub account.
 	`;
 };
 
@@ -101,6 +102,13 @@ const generatePrompt = (data: GithubProfile, language: string) => {
 const getGithubProfile = async (userNameGithub: string) => {
 	const githubProfile = await axios.get(
 		`https://api.github.com/users/${userNameGithub}`,
+		{
+			headers: {
+				Accept: 'application/vnd.github+json',
+				Authorization: `Bearer ${GITHUB_PERSONAL_TOKEN}`,
+				'X-GitHub-Api-Version': '2022-11-28',
+			},
+		},
 	);
 	return githubProfile.data;
 };
