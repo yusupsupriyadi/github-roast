@@ -11,6 +11,8 @@ const inter = Inter({
 export const metadata: Metadata = {
 	title: 'Roasted Github',
 	description: 'Roasted Github',
+	keywords: ['github', 'roasted', 'roasting', 'github roasted'],
+	authors: [{ name: 'Yusup Supriyadi', url: 'https://yusupsupriyadi.com' }],
 };
 
 export default function RootLayout({
