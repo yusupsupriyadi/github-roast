@@ -1,2 +1,3 @@
 # copy this file to .env and fill the value
 API_KEY_GEMINI_AI='YOUR_API_KEY_GEMINI_AI'
+GITHUB_PERSONAL_TOKEN='YOUR_GITHUB_PERSONAL_TOKEN'
