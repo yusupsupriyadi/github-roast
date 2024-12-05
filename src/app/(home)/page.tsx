@@ -28,7 +28,7 @@ export default async function Home() {
 	return (
 		<div className='relative h-screen'>
 			<Background />
-			<main className='relative px-4 md:px-0'>
+			<main className='relative px-4 md:px-0 h-full'>
 				<Title />
 				<Form languages={languages} />
 				<ResultRoasted />
