@@ -23,6 +23,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<head>
+				<meta
+					name='google-site-verification'
+					content='haax5TjmQaEaBSx5DH1lLfqYeHMTSY2MwWBA5eEMgww'
+				/>
 				<Script
 					defer
 					src='https://cloud.umami.is/script.js'
