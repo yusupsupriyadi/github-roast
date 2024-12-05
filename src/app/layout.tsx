@@ -10,7 +10,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
 	title: 'Roasted Github',
-	description: 'Roasted Github',
+	description:
+		'Roasted Github - Elevate your GitHub Profile with Precision Roasting. Get in-depth analysis and constructive feedback to make your GitHub profile more engaging and professional.',
 	keywords: ['github', 'roasted', 'roasting', 'github roasted'],
 	authors: [{ name: 'Yusup Supriyadi', url: 'https://yusupsupriyadi.com' }],
 };
