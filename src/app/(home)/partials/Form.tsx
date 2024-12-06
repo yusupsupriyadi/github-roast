@@ -5,6 +5,7 @@ import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { Language } from '@/components/global.types';
 import { AppStore, appStore } from '@/module/store';
+import { Flame, LoaderPinwheel } from 'lucide-react';
 
 export const Form = ({ languages }: { languages: Language[] }) => {
 	const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +50,17 @@ export const Form = ({ languages }: { languages: Language[] }) => {
 			<Button
 				onClick={handleSubmit}
 				disabled={isLoading}>
-				{isLoading ? 'Loading...' : 'Roast Me!'}
+				{isLoading ? (
+					<div className='flex items-center gap-1'>
+						<LoaderPinwheel className='w-5 h-5 animate-spin' />
+						<span>Analysing...</span>
+					</div>
+				) : (
+					<div className='flex items-center gap-1'>
+						<Flame className='w-5 h-5' />
+						<span>Roast Me!</span>
+					</div>
+				)}
 			</Button>
 		</section>
 	);
