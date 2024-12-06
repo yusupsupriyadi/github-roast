@@ -18,7 +18,7 @@ export const Select = ({
 				<option
 					key={index}
 					value={language.name}
-					className='hover:bg-neutral-700'>
+					className='hover:bg-neutral-700 text-sm'>
 					{language.name}
 				</option>
 			))}

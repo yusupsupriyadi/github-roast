@@ -78,3 +78,43 @@ body {
 .body-roasted b {
 	@apply p-1 px-2  rounded-lg text-sm bg-gradient-to-br from-neutral-800/30 via-neutral-800/50 to-white/20 backdrop-blur-sm border border-white/10;
 }
+
+/* Menambahkan custom scrollbar yang lebih ramping */
+::-webkit-scrollbar {
+	width: 6px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; /* Background track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsl(var(--muted-foreground)); /* Warna thumb scrollbar */
+	border-radius: 3px; /* Membuat sudut thumb lebih rounded */
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: hsl(var(--foreground)); /* Warna thumb saat hover */
+}
+
+/* Untuk Firefox */
+* {
+	scrollbar-width: thin; /* "thin" untuk scrollbar ramping */
+	scrollbar-color: hsl(var(--muted-foreground)) transparent; /* warna thumb dan track */
+}
+
+/* Custom style untuk select dropdown */
+select {
+  height: 36px; /* Tinggi default */
+}
+
+select:focus {
+  height: auto; /* Tinggi saat di-klik/focus */
+  min-height: 36px;
+}
+
+/* Style untuk option di dalam select */
+select option {
+  padding: 8px 12px;
+  cursor: pointer;
+}
