@@ -20,8 +20,8 @@ export async function POST(request: Request) {
 		const model = new GoogleGenerativeAI(
 			TOKEN as string,
 		).getGenerativeModel({
-			model: 'gemini-1.5-flash',
-			generationConfig: { temperature: 2.0 },
+			model: 'gemini-1.5-flash', // this is the model that will be used to generate the content
+			generationConfig: { temperature: 1.0 }, // this is the temperature for the AI to generate the content
 		});
 		const res = await model.generateContent(prompt);
 		const result = res.response.text();
@@ -53,14 +53,28 @@ const generatePrompt = (data: GithubProfile, language: string) => {
 		Website: ${data.blog || 'No website'}
 
 		Account Statistics:
-		• Followers: ${data.followers} people (${data.followers < 10 ? 'Wow so quiet!' : 'Pretty popular!'})
+		• Followers: ${data.followers} people (${
+		data.followers < 10 ? 'Wow so quiet!' : 'Pretty popular!'
+	})
 		• Following: ${data.following} people
-		• Followers/Following Ratio: ${(data.followers/data.following).toFixed(2)}
-		• Public Repositories: ${data.public_repos} (${data.public_repos < 5 ? 'Still a beginner!' : 'Pretty diligent!'})
-		• Private Repositories: ${data.total_private_repos || 'Being mysterious hiding repos'}
-		• Collaborators: ${data.collaborators || 0} (${data.collaborators ? 'Has friends!' : 'Forever alone coding'})
-		• Member since: ${new Date(data.created_at).getFullYear()} (${new Date().getFullYear() - new Date(data.created_at).getFullYear()} years on GitHub)
-		• Twitter: ${data.twitter_username ? '@' + data.twitter_username : 'Anti social media'}
+		• Followers/Following Ratio: ${(data.followers / data.following).toFixed(2)}
+		• Public Repositories: ${data.public_repos} (${
+		data.public_repos < 5 ? 'Still a beginner!' : 'Pretty diligent!'
+	})
+		• Private Repositories: ${
+			data.total_private_repos || 'Being mysterious hiding repos'
+		}
+		• Collaborators: ${data.collaborators || 0} (${
+		data.collaborators ? 'Has friends!' : 'Forever alone coding'
+	})
+		• Member since: ${new Date(data.created_at).getFullYear()} (${
+		new Date().getFullYear() - new Date(data.created_at).getFullYear()
+	} years on GitHub)
+		• Twitter: ${
+			data.twitter_username
+				? '@' + data.twitter_username
+				: 'Anti social media'
+		}
 
 		Based on the data above, create a roast that:
 
@@ -87,7 +101,7 @@ const generatePrompt = (data: GithubProfile, language: string) => {
 		- Smart and contextual humor
 		- Actionable suggestions wrapped in jokes
 		- Feel free to use emojis 🔥
-		- Only use <b> tags for important points
+		- Use <b> tags for important points and highlights or bold text, don't use * symbols
 
 		Note: Avoid:
 		- Harsh or offensive language
