@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 		'Roasted Github - Elevate your GitHub Profile with Precision Roasting. Get in-depth analysis and constructive feedback to make your GitHub profile more engaging and professional.',
 	keywords: ['github', 'roasted', 'roasting', 'github roasted'],
 	authors: [{ name: 'Yusup Supriyadi', url: 'https://yusupsupriyadi.com' }],
+	robots: 'index, follow',
 };
 
 export default function RootLayout({
